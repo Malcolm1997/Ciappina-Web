@@ -3,11 +3,98 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Repuestos de calidad">
-  <main class="hero">
-    <img class="hero-image" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1350&q=80" alt="Mostrador con repuestos" />
-    <h1>Repuestos de calidad para tu vehículo</h1>
-    <p class="subtitle">Más de 30 años de experiencia en el rubro automotor</p>
-    <a href="https://wa.me/5491112345678" class="cta">Consultanos por WhatsApp</a>
+  <main>
+    <section class="hero">
+      <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1350&q=80"
+        alt="Mostrador con repuestos"
+      />
+      <h1>Repuestos de calidad para tu vehículo</h1>
+      <p class="subtitle">Más de 30 años de experiencia en el rubro automotor</p>
+      <a href="https://wa.me/5491112345678" class="cta">Consultanos por WhatsApp</a>
+    </section>
+
+    <section class="about">
+      <div class="about-text">
+        <h2>¿Quiénes Somos?</h2>
+        <p>
+          Somos un negocio familiar dedicado a los repuestos automotor desde hace más
+          de 30 años. Nuestra prioridad es la confianza, la atención personalizada y
+          toda la experiencia que acumulamos a lo largo del tiempo.
+        </p>
+      </div>
+      <img
+        class="about-image"
+        src="https://images.unsplash.com/photo-1581092795360-fdc80183d523?auto=format&fit=crop&w=800&q=80"
+        alt="Equipo de trabajo"
+      />
+    </section>
+
+    <section class="products">
+      <h2>Productos Destacados</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=400&q=80" alt="Filtros" />
+          <p>Filtros</p>
+          <a href="https://wa.me/5491112345678" class="small-cta">Consultar disponibilidad</a>
+        </div>
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1603364355076-44a817a7ebc1?auto=format&fit=crop&w=400&q=80" alt="Baterías" />
+          <p>Baterías</p>
+          <a href="https://wa.me/5491112345678" class="small-cta">Consultar disponibilidad</a>
+        </div>
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=400&q=80" alt="Aceites" />
+          <p>Aceites</p>
+          <a href="https://wa.me/5491112345678" class="small-cta">Consultar disponibilidad</a>
+        </div>
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1581691621797-800a04f21358?auto=format&fit=crop&w=400&q=80" alt="Pastillas de freno" />
+          <p>Pastillas de freno</p>
+          <a href="https://wa.me/5491112345678" class="small-cta">Consultar disponibilidad</a>
+        </div>
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1621053913531-48b54839fc47?auto=format&fit=crop&w=400&q=80" alt="Correas" />
+          <p>Correas</p>
+          <a href="https://wa.me/5491112345678" class="small-cta">Consultar disponibilidad</a>
+        </div>
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1531177071257-7c1c19eb0afc?auto=format&fit=crop&w=400&q=80" alt="Iluminación" />
+          <p>Iluminación</p>
+          <a href="https://wa.me/5491112345678" class="small-cta">Consultar disponibilidad</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="howto">
+      <h2>¿Cómo comprar?</h2>
+      <ol>
+        <li>Escribinos por WhatsApp o Instagram.</li>
+        <li>Confirmamos stock y precio.</li>
+        <li>Retiro en local o envío.</li>
+      </ol>
+    </section>
+
+    <section class="testimonials">
+      <h2>Testimonios</h2>
+      <blockquote>
+        “Excelente atención y variedad de repuestos. ¡Muy recomendados!”
+      </blockquote>
+      <blockquote>
+        “Siempre encuentro lo que busco y me asesoran de la mejor manera.”
+      </blockquote>
+    </section>
+
+    <section class="contact">
+      <h2>Contacto</h2>
+      <div class="contact-buttons">
+        <a href="https://wa.me/5491112345678" class="cta">WhatsApp</a>
+        <a href="https://instagram.com/tuusuario" class="cta">Instagram</a>
+        <a href="https://maps.google.com" class="cta">Cómo llegar</a>
+      </div>
+      <p class="hours">Lunes a viernes de 9 a 18 hs.</p>
+    </section>
   </main>
 </Layout>
 
@@ -39,5 +126,76 @@ import Layout from '../layouts/Layout.astro';
     text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .about-image {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  .products {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .product-card {
+    background: var(--dark-gray);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  .small-cta {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.875rem;
+  }
+  .howto {
+    padding: 2rem 1rem;
+  }
+  .howto ol {
+    max-width: 500px;
+    margin: auto;
+  }
+  .testimonials {
+    padding: 2rem 1rem;
+    background: #1d1d1d;
+  }
+  .testimonials blockquote {
+    margin: 0 0 1rem;
+    font-style: italic;
+  }
+  .contact {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .contact-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .hours {
+    font-size: 0.9rem;
   }
 </style>
